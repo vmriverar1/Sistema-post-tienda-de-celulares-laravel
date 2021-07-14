@@ -11,7 +11,7 @@
     <script src="{{ asset('libs/jquery-pjax/jquery.pjax.js') }}" defer></script>
 </head>
 <body>
-    <div class="content">
+    <div class="content2">
         <p style="font-weight: 500;">Seleccione la empresa</p>
         <div class="contenedorDiv">
             @foreach ($stores2 as $store)
@@ -33,18 +33,13 @@
 </html>
 
 <style type="text/css">
-    .content{
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 5% 20%;
+    .content2{
+
         align-items: center;
         justify-items: center;
     }
     .contenedorDiv{
         display: grid;
-        grid-template-columns: minmax(150px, 500px) minmax(150px, 500px);
-        /*grid-template-columns: minmax(250px, 500px);*/
-        column-gap: 10px;
         text-align: center;
     }
     .selectStore{
@@ -64,6 +59,67 @@
     }
     P{
         font-family: 'Montserrat', sans-serif;
+    }
+
+    @media (min-width:1200px){
+        .contenedorDiv{
+            grid-template-columns: minmax(150px, 500px) minmax(150px, 500px);
+            column-gap: 10px;
+        }
+
+        .content2{
+            display: grid;
+            grid-template-columns: 1fr
+            padding: 5% 20%;
+        }
+
+        P{
+            font-size: 15px;
+        }
+
+    }
+
+    @media (max-width:1199px) and (min-width:992px){
+        .contenedorDiv{
+            grid-template-columns: minmax(150px, 500px) minmax(150px, 500px);
+            column-gap: 10px;
+        }
+        .content2{
+            display: grid;
+            grid-template-columns: 1fr
+            padding: 5% 20%;
+        }
+
+        P{
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width:991px) and (min-width:768px){
+        .contenedorDiv{
+            grid-template-columns: 100%;
+            column-gap: 10px;
+        }
+        .content2{
+            padding: 5% 10px;
+        }
+        P{
+            font-size: 45px;
+        }
+    }
+
+    @media (max-width:767px){
+        .contenedorDiv{
+            grid-template-columns: 100%;
+            column-gap: 10px;
+        }
+        .content2{
+            padding: 5% 10px;
+        }
+
+        P{
+            font-size: 45px;
+        }
     }
 
 </style>

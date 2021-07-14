@@ -136,7 +136,7 @@ function constructorCajaVent(obj,arr){
 
 function constructorListaCaja(id,nombre,stock,precio,tipoprecio,minimomayor,preciomayor,imei,imagen) {
     select = "";
-    if (imei != null && imei != "" && imei != "[]" ) {
+    if (imei != null && imei != "NULL" && imei != "" && imei != "[]" ) {
         imei = JSON.parse(imei);
         opciones = "";
         for (var i = 0; i < imei.length; i++) {

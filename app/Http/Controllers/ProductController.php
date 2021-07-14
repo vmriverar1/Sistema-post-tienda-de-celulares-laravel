@@ -144,6 +144,7 @@ class ProductController extends Controller
         $request['foto'] = $imagen;
         $request['store'] = valorStore();
         $request['cod_prod'] = ($request['cod_prod'] == null || $request['cod_prod'] == "") ? "ninguno" : $request['cod_prod'];
+        $request['imei'] = ($request['imei'] == null || $request['imei'] == "") ? "[]" : $request['imei'];
 
         $dato = Product::create($request->all());
 
@@ -222,6 +223,7 @@ class ProductController extends Controller
         $request['foto'] = $file;
         $request['store'] = valorStore();
         $request['cod_prod'] = ($request['cod_prod'] == null || $request['cod_prod'] == "") ? "ninguno" : $request['cod_prod'];
+        $request['imei'] = ($request['imei'] == null || $request['imei'] == "") ? "[]" : $request['imei'];
         $respuesta = Product::findOrFail($id)->update($request->all());
         return "1";
     }

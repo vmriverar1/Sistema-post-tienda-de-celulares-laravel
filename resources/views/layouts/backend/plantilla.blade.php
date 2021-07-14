@@ -157,6 +157,13 @@
                           </div>
 
                           <div class="form-group row" style="">
+                              <label class="col-lg-2 col-sm-2 col-md-12 col-xs-12 form-control-label">ID comprobante:</label>
+                              <div class="col-lg-10 col-sm-10 col-md-12 col-xs-12">
+                                  <input type="text" name="cod_comprobante" class="form-control  limpiarSpend" placeholder="Escribir código de comprobante" value="">
+                              </div>
+                          </div>
+
+                          <div class="form-group row" style="">
                               <label class="col-lg-2 col-sm-2 col-md-12 col-xs-12 form-control-label">Salida:</label>
                               <div class="col-lg-10 col-sm-10 col-md-12 col-xs-12">
                                   <select name="salida" class="form-control tipodeSalida limpiarSpend" value="">
@@ -164,12 +171,6 @@
                               </div>
                           </div>
 
-                          <div class="form-group row" style="">
-                              <label class="col-lg-2 col-sm-2 col-md-12 col-xs-12 form-control-label">ID comprobante:</label>
-                              <div class="col-lg-10 col-sm-10 col-md-12 col-xs-12">
-                                  <input type="text" name="cod_comprobante" class="form-control  limpiarSpend" placeholder="Escribir código de comprobante" value="">
-                              </div>
-                          </div>
 
                           <input type="hidden" class="dataCompra" name="productos">
                           {{-- area productos --}}
@@ -228,6 +229,41 @@
       }
       .dataTables_info{
         display: none;
+      }
+
+      .contenedorCompra{
+        display: grid;
+      }
+
+
+      .subObjCompraCss{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(2, minmax(35px, 37px));
+      }
+
+      @media (min-width:1200px){
+        .contenedorCompra{
+          grid-template-columns: 20% 20% 15% 20% 20% 5%;
+        }
+      }
+
+      @media (max-width:1199px) and (min-width:992px){
+        .contenedorCompra{
+          grid-template-columns: 20% 20% 15% 20% 20% 5%;
+        }
+      }
+
+      @media (max-width:991px) and (min-width:768px){
+        .contenedorCompra{
+          grid-template-columns: repeat(3, 33%);
+        }
+      }
+
+      @media (max-width:767px){
+        .contenedorCompra{
+          grid-template-columns: repeat(3, 33%);
+        }
       }
     </style>
 

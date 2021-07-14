@@ -1121,27 +1121,27 @@ $(document).on("click", ".agregarProductoCobro", function(e){
 		return
 	}
 
-	$(".productosCompra").append('<div class="contenedorCompra" cantidad="1" imei="[]" nombre="'+nombre+'" costo="'+costo+'" idProd="'+id+'" style="display: grid;grid-template-columns: 10% 30% 30% 10% 10% 5%;grid-column-gap: 10px;">'+
+	$(".productosCompra").append('<div class="contenedorCompra" cantidad="1" imei="[]" nombre="'+nombre+'" costo="'+costo+'" idProd="'+id+'" style="">'+
       '<img src="'+foto+'" class="img-thumbnail previsualizarfn" width="100px">'+
       '<div class="form-group row objTitulo" style="margin-left: 10px;"><label class="productoTituloCompra" style="font-weight:bold">Subtotal del producto S/.'+costo+':</label><div class=""><div style="display: grid; grid-template-columns: 80%;">'+nombre+'</div></div></div>'+
       '<div class="form-group row objImei" style="">'+
           '<label class="">IMEI:</label>'+
           '<div class=""><div class="contendorMulti" style="display: grid; grid-template-columns: 50% 20%;">'+
               '<div class="dataMulti"><input type="text" class="form-control" placeholder="Escribir lista de numeros de IMEI" value=""></div>'+
-              '<div><a class="btn btn-fw accent agregarItem" style="color:white">+</a></div>'+
+              '<div><a class="btn accent agregarItem" style="color:white">+</a></div>'+
           '</div><input type="hidden" class="objetivoarr multiarr" value="">'+
               '<p class="m-b btn-groups objetivoarrbtns" cobro="1"></p>'+
           '</div>'+
       '</div>'+
-      '<div class="form-group row objStock"  style=""><label class="">Stock:</label>'+
+      '<div class="form-group row objStock subObjCompraCss"  style=""><label class="">Stock:</label>'+
           '<div class=""><div style="display: grid; grid-template-columns: 80%"><input type="number" value="1" class="form-control stockCompraProd" onkeypress="return filterFloat(event,this);"></div></div>'+
       '</div>'+
 
-      '<div class="form-group row objCosto"  style=""><label class="">Costo:</label><div class="">'+
+      '<div class="form-group row objCosto subObjCompraCss"  style=""><label class="">Costo:</label><div class="">'+
             '<div style="display: grid; grid-template-columns: 80%;"><input type="number" value="'+costo+'" class="form-control costoCompraProd" onkeypress="return filterFloat2(event,this);"></div></div>'+
       '</div>'+
-      '<div>'+
-	    '<label class="">___</label>'+
+      '<div class="subObjCompraCss">'+
+	    '<label class="">Eliminar</label>'+
 	    '<a class="btn btn-xs danger eliminarProdCompra" style="color:white"><i class="fa fa-trash"></i></a>'+
 	  '</div>'+
     '</div>');
@@ -1463,7 +1463,7 @@ function constructorCajaVent(obj,arr){
 
 function constructorListaCaja(id,nombre,stock,precio,tipoprecio,minimomayor,preciomayor,imei,imagen) {
     select = "";
-    if (imei != null && imei != "" && imei != "[]" ) {
+    if (imei != null && imei != "NULL" && imei != "" && imei != "[]" ) {
         imei = JSON.parse(imei);
         opciones = "";
         for (var i = 0; i < imei.length; i++) {

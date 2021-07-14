@@ -118,7 +118,7 @@
                       @if(detectarPrivacidad("menu","usuarios",$config,auth()->user()->role))
                           <li>
                               <a href="{{route('usuarios')}}" >
-                                  <span class="nav-text" style="color: white">Usuarios</span>
+                                  <span class="nav-text" style="color: white">Empleados</span>
                               </a>
                           </li>
                       @endif
@@ -158,7 +158,7 @@
                           <span class="nav-icon text-white no-fade">
                               <i class="ion-pie-graph"></i>
                           </span>
-                          <span class="nav-text">Usuarios</span>
+                          <span class="nav-text">Reportes</span>
                       </a>
                     <ul class="nav-sub nav-mega nav-mega-1">
                       @if(detectarPrivacidad("menu","rgenerales",$config,auth()->user()->role))
