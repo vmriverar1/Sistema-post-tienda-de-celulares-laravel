@@ -2,7 +2,7 @@
 
 @section('contenido1')
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqaWBWb4e-zM0ab4J3BNvKO9lFeIMnds&libraries=places"></script>
+
 <link rel="stylesheet" href="{{asset('bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css')}}">
 <!-- bootstrap color picker https://farbelous.github.io/bootstrap-colorpicker/v2/-->
 <script src="{{asset('bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js')}}"></script>
