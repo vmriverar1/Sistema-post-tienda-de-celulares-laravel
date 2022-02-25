@@ -2,7 +2,7 @@
 
 @section('contenido1')
 
-
+<!-- aquiva el script de tu llave de google --!>
 <link rel="stylesheet" href="{{asset('bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css')}}">
 <!-- bootstrap color picker https://farbelous.github.io/bootstrap-colorpicker/v2/-->
 <script src="{{asset('bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js')}}"></script>
